@@ -1,0 +1,24 @@
+//Utils
+@import "./utils/placeholders";
+@import "./utils/vars";
+@import "./utils/hidden";
+
+//Base
+@import "./base/reset";
+@import "./base/common";
+
+//Components
+@import "./components/containers";
+@import "./components/modal";
+
+//layout
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/main-item";
+@import "./layout/about";
+@import "./layout/employee";
+@import "./layout/employee-social-list";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/portfolio-menu";
+@import "./layout/portfoio-list";

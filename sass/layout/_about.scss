@@ -1,0 +1,19 @@
+.about {
+  padding-bottom: 92px;
+}
+.about__title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  margin-bottom: 50px;
+}
+.about__photo {
+  display: flex;
+  margin-left: -30px;
+}
+.about__item {
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
+}

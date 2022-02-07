@@ -1,0 +1,193 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+}
+
+.footer__logo-web {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+.footer__list {
+  margin-top: 20px;
+}
+.footer__maps {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: rgb(136, 130, 130);
+  }
+}
+
+.footer__tel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: rgb(252, 252, 252);
+  }
+}
+
+.footer__mail {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: rgb(252, 252, 252);
+  }
+}
+
+.footer__item-mar {
+  margin-bottom: 9px;
+}
+.footer__flex {
+  display: flex;
+}
+
+.footer__social {
+  margin-left: 70px;
+  padding-top: calc(75px - 60px);
+}
+.footer__social-tittle {
+  font-family: Roboto;
+  font-weight: 700px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer__social-list {
+  display: flex;
+}
+.footer__social-item {
+  & + & {
+    margin-left: 10px;
+  }
+}
+.footer__social-link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  @extend %line-items;
+  border-radius: 50%;
+  color: var(--white-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+  }
+}
+.footer__social-icon {
+  fill: currentColor;
+}
+
+.footer__follow {
+  margin-left: 94px;
+  padding-top: calc(72px - 60px);
+}
+.footer__follow-tittle {
+  font-family: Roboto;
+  font-weight: 700px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer__input {
+  height: 50px;
+  width: 360px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  @extend %line-items;
+  letter-spacing: 0.03em;
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  &::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    @extend %line-items;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer__form-item {
+  display: flex;
+}
+.footer__button {
+  margin-left: 12px;
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 28px;
+  border: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  justify-content: center;
+  @extend %line-items;
+  &:focus,
+  &:hover {
+    background-color: #188ce8;
+  }
+}
+
+.footer__send-icon {
+  margin-left: 10px;
+  justify-content: center;
+  @extend %line-items;
+}
