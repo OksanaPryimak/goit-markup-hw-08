@@ -44,6 +44,9 @@ button {
 
 img {
   display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -59,10 +62,28 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .backdrop {
@@ -70,8 +91,10 @@ body {
   top: 0;
   width: 100vw;
   height: 100vh;
+  margin: auto;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 500ms, visibility 500ms;
+  z-index: 100;
 }
 
 .backdrop.is-hidden .modal {
@@ -79,16 +102,31 @@ body {
 }
 
 .modal {
-  width: 530px;
-  min-height: 580px;
-  background-color: var(--white-color);
-  border-radius: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 500ms;
-  padding: 40px;
+  transform: translate(-50%, -50%);
+  padding: 25px 25px;
+  z-index: 100;
+  width: calc(100% - 30px);
+  /* height: auto; */
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    padding: 40px 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close {
@@ -121,14 +159,25 @@ body {
 }
 
 .modal-title {
-  font-family: Roboto;
-  font-weight: 700;
+  display: block;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: bold;
   font-size: 20px;
-  line-height: 1.15;
   text-align: center;
-  color: #212121;
-  margin-bottom: 12px;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-title {
+    width: 370px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    width: 100%;
+  }
 }
 
 .form-field {
@@ -426,18 +475,40 @@ body {
 }
 
 .main-item {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  margin-left: -30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.container-main-list {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .main-item {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-item {
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-main-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-main-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .main-item__list {
-  width: calc(100% / 4 - 30px);
-  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .main-item__list::before {
@@ -449,6 +520,21 @@ body {
   margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .main-item__list {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-item__list {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .main-item__list:nth-child(1)::before {
@@ -508,18 +594,32 @@ body {
 }
 
 .employee {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
   background: #f5f4fa;
 }
 
+@media screen and (min-width: 1200px) {
+  .employee {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
+
 .employee__title {
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.17;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .employee__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .employee__name {
@@ -539,25 +639,65 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--address-color);
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .employee__position {
+    margin-bottom: 30px;
+  }
 }
 
 .employee__list {
-  display: flex;
-  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .employee__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .employee__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .employee__item {
-  width: calc(100% / 4 - 30px);
-  margin-left: 30px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .employee__item {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .employee__item {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .employee__div {
   padding-top: 30px;
-  padding-bottom: 26px;
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .employee__div {
+    padding-bottom: 26px;
+  }
 }
 
 .employee__social-list {
@@ -590,8 +730,15 @@ body {
 }
 
 .clients {
-  padding-top: 93px;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .clients__title {
@@ -599,25 +746,50 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
+  margin: -15px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.clients__item + .clients__item {
-  margin-left: 30px;
+.clients__item {
+  display: flex;
+  align-items: center;
+  flex-basis: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
+  height: 92px;
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    flex-basis: calc((100% - 6 * 30px) / 6);
+  }
 }
 
 .clients__link {
-  width: 170px;
-  height: 92px;
+  width: 100%;
+  height: 100%;
   background-color: var(--white-color);
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -884,12 +1056,36 @@ body {
 
 .portfolio-menu-list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-menu-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-menu-list {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .prt-btn {
-  margin-left: 8px;
+  margin-bottom: 15px;
+}
+
+.prt-btn:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .prt-btn {
+    margin-left: 8px;
+  }
 }
 
 .portfolio-list-title {
@@ -915,15 +1111,26 @@ body {
 }
 
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
   margin-bottom: -30px;
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
 .portfolio-img {
-  width: calc(100% / 3 - 30px);
-  margin-left: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   background: #ffffff;
@@ -938,6 +1145,20 @@ body {
 
 .portfolio-img:hover .portfolio-img-text {
   transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-img {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-img {
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .portfolio-img-wrap {

@@ -46,9 +46,24 @@
 }
 .portfolio-menu-list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 .prt-btn {
-  margin-left: 8px;
+  margin-bottom: 15px;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 8px;
+  }
 }
