@@ -1,9 +1,41 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @include tab {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @include desk {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 .site-list,
+.connect {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
 .connect-list {
+  display: flex;
+  margin-left: 84px;
+  align-items: center;
+  flex-wrap: wrap;
+  li + li {
+    margin-top: 10px;
+  }
+  @include desk {
+    justify-content: center;
+    margin-left: 305px;
+    li + li {
+      margin-left: 30px;
+      margin-top: 0;
+    }
+  }
+}
+.connect-list__mail-env,
+.connect-list__tel-mar {
   display: flex;
 }
 .site-list__item:not(:last-child) {
@@ -19,6 +51,13 @@
 .header__logo {
   margin-right: 93px;
 }
+
+.header-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .site-list__link {
   font-weight: 500;
   font-size: 14px;
@@ -65,9 +104,7 @@
     color: var(--accent-color);
   }
 }
-.connect-list__tel-mar {
-  margin-left: 50px;
-}
+
 .connect-list__mail-icon,
 .connect-list__tel-icon {
   margin-right: 10px;

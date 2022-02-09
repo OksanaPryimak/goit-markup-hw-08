@@ -1,5 +1,8 @@
 .about {
   padding-bottom: 92px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .about__title {
   font-size: 36px;

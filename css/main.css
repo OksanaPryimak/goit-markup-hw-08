@@ -86,6 +86,19 @@ body {
   }
 }
 
+.container-mob {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container-mob {
+    width: 480px;
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -308,12 +321,60 @@ body {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .site-list,
+.connect {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .site-list,
+  .connect {
+    display: none;
+  }
+}
+
 .connect-list {
+  display: flex;
+  margin-left: 84px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.connect-list li + li {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .connect-list {
+    justify-content: center;
+    margin-left: 305px;
+  }
+  .connect-list li + li {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
+
+.connect-list__mail-env,
+.connect-list__tel-mar {
   display: flex;
 }
 
@@ -332,6 +393,12 @@ body {
 
 .header__logo {
   margin-right: 93px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-menu {
+    display: none;
+  }
 }
 
 .site-list__link {
@@ -384,10 +451,6 @@ body {
   color: var(--accent-color);
 }
 
-.connect-list__tel-mar {
-  margin-left: 50px;
-}
-
 .connect-list__mail-icon,
 .connect-list__tel-icon {
   margin-right: 10px;
@@ -424,30 +487,77 @@ body {
 }
 
 .main {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 188px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-phone-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
-  max-width: 1600px;
   margin: 0 auto;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-phone-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-tab-1x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-tab-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon.jpg);
+  }
+}
+
 .main__title {
+  display: inline-block;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 30px;
-  width: 696px;
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .main__title {
+    padding-right: 180px;
+    padding-left: 180px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__title {
+    font-size: 44px;
+    line-height: 1.36;
+    padding: 0;
+  }
 }
 
 .main__button {
@@ -572,6 +682,12 @@ body {
 
 .about {
   padding-bottom: 92px;
+}
+
+@media screen and (max-width: 1199px) {
+  .about {
+    display: none;
+  }
 }
 
 .about__title {
@@ -1182,5 +1298,115 @@ body {
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-btn {
+  margin-left: auto;
+  background-color: var(--white-color);
+  border: none;
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.menu-btn__svg {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
+}
+
+.menu-btn__svg:hover {
+  fill: var(--accent-color);
+}
+
+.mob-menu {
+  position: fixed;
+  background-color: var(--white-color);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 48px;
+}
+
+.menu-close-btn {
+  margin-left: auto;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: var(--white-color);
+  color: #000000;
+}
+
+.mob-close-icon {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
+}
+
+.mob-close-icon:hover {
+  fill: var(--accent-color);
+}
+
+.site-mob_item:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.site-mob_link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.site-mob_link:hover {
+  color: var(--accent-color);
+}
+
+.mob-connect-list__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17px;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-list__tel {
+  margin-top: 302px;
+  margin-bottom: 32px;
+}
+
+.mob-connect-list__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mob-list__mail {
+  margin-bottom: 64;
+}
+
+.mob__social-list {
+  display: flex;
+}
+
+.mob__social-list-item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 /*# sourceMappingURL=main.css.map */

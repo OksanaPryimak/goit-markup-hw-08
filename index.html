@@ -15,7 +15,7 @@
         rel="stylesheet" />
 </head>
 <body>
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header__container">  
         <a class="header__logo link"  lang="en" href=""> <span class="header__logo-web">Web</span>Studio</a>
         <nav class="header-menu">
@@ -53,8 +53,63 @@
                 </li>
             </ul>
         </div>
+        <button type="type-button" class="menu-btn"> 
+        <svg class="menu-btn__svg" width="40" height="40">
+            <use href="images/icons.svg#icon-menu-40px"></use>
+        </svg>
+        </button>
         </div>
-    </header> -->
+
+        <!-- ---------Mobile menu -->
+        <div class="mob-menu">
+        <div class="container-mob">
+            <button type="button" class="menu-close-btn">
+                <svg class="mob-close-icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-close-black"></use>
+                </svg>
+            </button>
+        <ul class="site-mob list">
+            <li class="site-mob_item">
+                <a class="site-mob_link link" href="">Студия</a>
+            </li>
+            <li class="site-mob_item">
+                <a class="site-mob_link link" href="portfolio.html">Портфолио</a>
+            </li>
+            <li class="site-mob_item">
+                <a class="site-mob_link link" href="">Контакты</a>
+            </li>
+        </ul>
+        <div class="mob-connect">
+            <ul class="mob-connect-list list">
+                <li class="mob-list__tel">
+                    <a class="mob-connect-list__tel link" href="tel:+380961111111">
+                        +38 096 111 11 11
+                    </a>
+                <li class="mob-list__mail">
+                <a class="mob-connect-list__mail link" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                </a>
+                </li>
+                </li>
+            </ul>
+            <ul class="mob__social-list">
+                <li class="mob__social-list-item">
+                    <a href="">Instagram</a>
+                </li>
+                <li class="mob__social-list-item">
+                    <a href="">Twitter</a>
+                </li>
+                <li class="mob__social-list-item">
+                    <a href="">Facebook</a>
+                </li>
+                <li class="mob__social-list-item">
+                    <a href="">LinkedIn</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </header>
     <main>
         <section class="main">
          <div class="container">
@@ -82,43 +137,62 @@
             </ul>
             </div>
         </section>
-        <!-- <section class="about">
+        <section class="about">
             <div class="container">
             <h2 class="about__title" >Чем мы занимаемся</h2>
             <ul class="about__photo list">
                 <li class="about__item">
-                    <img src="images/box1.jpg" 
+                    <img 
+                    srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
+                    src="images/box1.jpg" 
                     alt="фото девайсов"
                     width="370"
                     height="294"
                     />
                 </li>
                 <li class="about__item">
-                    <img src="images/box2.jpg" 
+                    <img 
+                    srcset="./images/box2.jpg 1x, ./images/box-2x.jpg 2x"
+                    src="images/box2.jpg" 
                     alt="фото девайсов" 
                     width="370" 
                     height="294" />
                 </li>
                 <li class="about__item">
-                    <img src="images/box3.jpg" 
+                    <img 
+                    srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                    src="images/box3.jpg" 
                     alt="фото девайсов" 
                     width="370" 
                     height="294" />
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
         
         <section class="employee">
             <div class="container">
             <h2 class="employee__title" >Наша команда</h2>
            <ul class="employee__list list">
                <li class="employee__item">
-                   <img src="images/img.jpg" 
-                   alt="фото сотрудника"
-                   width="270"
-                   height="260"
-                   />
+             <picture>
+                <source srcset="
+                ./images/eployee/img.jpg 1x, 
+                ./images/eployee/img-2x.jpg 2x"
+                   media="(min-width: 1200px)" />
+                <source srcset="
+                ./images/eployee/img-tab-1x.jpg 1x, 
+                ./images/eployee/img-tab-2x.jpg 2x"
+                 media="(min-width: 768px)" />
+                <source srcset="
+                ./images/eployee/img-mob-1x.jpg 1x, 
+                ./images/eployee/img-mob-2x.jpg 2x"
+                 media="(min-width: 320px)" />
+
+                <img src="images/eployee/img.jpg" alt="фото сотрудника" />
+
+            </picture>
+                
                    <div class="employee__div" >
                        <h3 class="employee__name" >Игорь Демьяненко</h3>
                        <p class="employee__position" lang="en">Product Designer</p>
@@ -161,11 +235,19 @@
                    </div>
                </li>
                <li class="employee__item">
-                   <img src="images/img1.jpg" 
-                   alt="фото сотрудника"
-                   width="270"
-                   height="260"
-                   />
+                <picture>
+                <source srcset="
+                ./images/eployee/img1.jpg 1x, 
+                ./images/eployee/img1-2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="
+                ./images/eployee/img1-tab-1x.jpg 1x, 
+                ./images/eployee/img1-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="
+                ./images/eployee/img1-mob-1x.jpg 1x, 
+                ./images/eployee/img1-mob-2x.jpg 2x" media="(min-width: 320px)" />
+                
+                <img src="images/eployee/img1.jpg" alt="фото сотрудника" />
+                </picture>
                    <div class="employee__div">
                        <h3 class="employee__name" >Ольга Репина</h3>
                        <p class="employee__position" lang="en">Frontend Developer</p>
@@ -206,10 +288,19 @@
                     </div>
                </li>
                <li class="employee__item">
-                   <img src="images/img2.jpg" 
-                   alt="фото сотрудника" 
-                   width="270" 
-                   height="260" />
+                <picture>
+                <source srcset="
+                ./images/eployee/img2.jpg 1x, 
+                ./images/eployee/img2-2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="
+                ./images/eployee/img2-tab-1x.jpg 1x, 
+                ./images/eployee/img2-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="
+                ./images/eployee/img2-mob-1x.jpg 1x, 
+                ./images/eployee/img2-mob-2x.jpg 2x" media="(min-width: 320px)" />
+                
+                    <img src="images/eployee/img2.jpg" alt="фото сотрудника" />
+                </picture>
                    <div class="employee__div">
                        <h3 class="employee__name" >Николай Тарасов</h3>
                         <p class="employee__position" lang="en">Marketing</p>
@@ -250,10 +341,19 @@
                         </div>
                </li>
                 <li class="employee__item">
-                    <img src="images/img3.jpg" 
-                    alt="фото сотрудника" 
-                    width="270" 
-                    height="260" />
+                    <picture>
+                <source srcset="
+                ./images/eployee/img3.jpg 1x, 
+                ./images/eployee/img3-2x.jpg 2x" media="(min-width: 1200px)" />
+                <source srcset="
+                ./images/eployee/img3-tab-1x.jpg 1x, 
+                ./images/eployee/img3-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="
+                ./images/eployee/img3-mob-1x.jpg 1x, 
+                ./images/eployee/img3-mob-2x.jpg 2x" media="(min-width: 320px)" />
+                    
+                <img src="images/eployee/img3.jpg" alt="фото сотрудника" />
+                </picture>
                    <div class="employee__div"> 
                      <h3 class="employee__name" >Михаил Ермаков</h3>
                       <p class="employee__position" lang="en">UI Designer</p>
