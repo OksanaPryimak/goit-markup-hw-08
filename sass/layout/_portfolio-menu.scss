@@ -41,8 +41,16 @@
 }
 
 .portfolio-menu {
-  padding-top: 96px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 96px;
+    padding-bottom: 50px;
+  }
 }
 .portfolio-menu-list {
   display: flex;

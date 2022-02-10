@@ -69,11 +69,15 @@
   margin-bottom: 9px;
 }
 .footer__flex {
-  display: flex;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  // display: flex;
 }
 
 .footer__social {
-  margin-left: 70px;
+  // text-align: center;
+  // margin-left: 70px;
   padding-top: calc(75px - 60px);
 }
 .footer__social-tittle {
@@ -115,7 +119,7 @@
 }
 
 .footer__follow {
-  margin-left: 94px;
+  // margin-left: 94px;
   padding-top: calc(72px - 60px);
 }
 .footer__follow-tittle {
@@ -156,7 +160,7 @@
 }
 
 .footer__form-item {
-  display: flex;
+  // display: flex;
 }
 .footer__button {
   margin-left: 12px;
