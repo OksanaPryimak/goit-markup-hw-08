@@ -81,13 +81,23 @@
     text-align: left;
   }
 }
-
+.footer-tab {
+  @include tab {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
 .footer__social {
+  @include tab {
+    margin-top: -60px;
+    margin-left: 165px;
+  }
   @include desk {
     margin-left: 70px;
     padding-top: calc(75px - 60px);
-  }
-  @include desk {
     margin-top: -60px;
   }
 }
@@ -117,6 +127,9 @@
   @include tel {
     margin-bottom: 60px;
   }
+  // @include desk {
+  //   margin-bottom: -60px;
+  // }
 }
 
 .footer__social-link {
@@ -138,11 +151,15 @@
 .footer__social-icon {
   fill: currentColor;
 }
-
 .footer__follow {
+  @include tab {
+    margin-top: 60px;
+    justify-content: center;
+  }
   @include desk {
     margin-left: 94px;
     padding-top: calc(72px - 60px);
+    margin-top: 12px;
   }
 }
 .footer__follow-tittle {
@@ -180,6 +197,12 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
+  @include tab {
+    width: 480px;
+  }
+  @include desk {
+    width: 358px;
+  }
 }
 
 .footer__form-item {
@@ -189,6 +212,11 @@
   align-items: center;
   flex-direction: column;
 
+  @include tab {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   @include desk {
     display: flex;
     flex-direction: row;
