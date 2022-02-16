@@ -1073,14 +1073,12 @@ body {
   display: flex;
 }
 
-.footer__social-item + .footer__social-item {
-  margin-left: 10px;
+.footer__social-item {
+  margin-bottom: 60px;
 }
 
-@media screen and (min-width: 480px) {
-  .footer__social-item {
-    margin-bottom: 60px;
-  }
+.footer__social-item + .footer__social-item {
+  margin-left: 10px;
 }
 
 .footer__social-link {
